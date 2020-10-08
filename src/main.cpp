@@ -7,8 +7,7 @@ Controller* controller;
 void setup() {
     Serial.begin(115200);
     Serial.flush();
-    Serial.println("Version:");
-    Serial.println(__DATE__ __TIME__);
+    Serial.println("Version:" __DATE__ " " __TIME__);
     controller = new Controller();
 }
 
