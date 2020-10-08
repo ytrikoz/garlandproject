@@ -32,7 +32,6 @@ struct Pin {
     };
 
     void applyState() {
-        Serial.printf("pin:%d->%d\r\n", _num, _state);
         digitalWrite(_num, _state);
     }
 };

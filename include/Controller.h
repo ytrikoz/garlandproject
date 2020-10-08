@@ -50,10 +50,12 @@ class Controller {
     }
 
     void next() {
+        Serial.printf("pos:%d -> OFF\r\n", _pos);
         _pins[_pos].off();
 
         if (_cycleDuration > 0) {
             if (++_pos >= NUM_PINS) _pos = 0;
+            Serial.printf("pos:%d -> ON\r\n", _pos);
             _pins[_pos].on();
             _cycleStarted = millis();
         }
